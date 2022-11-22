@@ -1,19 +1,21 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Home from '../Pages/Home';
 import Contacto from '../Pages/Contacto';
 import Producto from '../Pages/Producto';
-
-const WebRoutes = () => (
-    <BrowserRouter>
-        <Routes>
-            <Route exact path='/' component={Home} />
-            <Route path='/contacto' component={Contacto} />
-            <Route path='/producto' component={Producto} />
-            <Route path='*' component={() => <div>404</div>} />
-        </Routes>
-    </BrowserRouter>
-);
-
-export default WebRoutes;
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+const Router = () => {
+    const Failed = () => <h1>404</h1>;
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route exact path="/" element={<Home />}></Route>
+                    <Route path="/Contacto" element={<Contacto />}></Route>
+                    <Route path="/Producto" element={<Producto />}></Route>
+                    <Route path="*" element={<Failed />}></Route>
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
+};
+export default Router;
