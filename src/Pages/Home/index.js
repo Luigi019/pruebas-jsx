@@ -69,6 +69,9 @@ function Home() {
                                 <a className="nav-link" href="/contacto2">Contacto2</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link" href="/home2">Uso de providers</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="/crud">Crud</a>
                             </li>
 
